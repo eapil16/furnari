@@ -39,6 +39,33 @@ document.addEventListener('DOMContentLoaded', () => {
       nextEl: ".brands-slider-next",
       prevEl: ".brands-slider-prev",
     },
+    breakpoints: {
+      1441: {
+        spaceBetween: 22,
+        slidesPerView: 5,
+      },
+    }
+  });
+
+  const swiperbrandshistory = new Swiper(".history-slider", {
+    loop: true,
+    spaceBetween: 24,
+    slidesPerView: 1.2,
+    speed: 800,
+    pagination: {
+      el: ".brands-history-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".brands-history-next",
+      prevEl: ".brands-history-prev",
+    },
+    breakpoints: {
+      768: {
+        spaceBetween: 22,
+        slidesPerView: 'auto',
+      },
+    }
   });
 
   const swipernews = new Swiper(".news-slider", {
@@ -46,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     spaceBetween: 14,
     speed: 800,
     slidesPerView: 3,
+    autoHeight: true,
     pagination: {
       el: ".main-news-pagination",
       clickable: true,
@@ -55,9 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: ".main-news-prev",
     },
     breakpoints: {
+      1441: {
+        spaceBetween: 24,
+        slidesPerView: 4,
+        loop: false,
+        autoHeight: false,
+      },
       768: {
         spaceBetween: 24,
         slidesPerView: 'auto',
+        loop: false,
+        autoHeight: false,
       },
     }
   });
@@ -149,6 +185,10 @@ document.addEventListener('DOMContentLoaded', () => {
         $('body').removeClass('hidd');
       }
     }
+    if (e.target.closest('.product-content__text')) {
+      document.querySelector('.product-content__text').classList.toggle('show');
+    }
+    
   });
 
   setTimeout(function() {
@@ -355,7 +395,7 @@ $(document).on('click', '.btn.increase', function(){
 
   const swiperpopularmobile = new Swiper(".popular-mobile", {
     loop: true,
-    spaceBetween: 14,
+    spaceBetween: 22,
     speed: 800,
     slidesPerView: 2,
     pagination: {
@@ -385,7 +425,7 @@ $(document).on('click', '.btn.increase', function(){
 
   const swiperresult = new Swiper(".result-swiper", {
     loop: false,
-    spaceBetween: 14,
+    spaceBetween: 22,
     speed: 800,
     slidesPerView: 2,
     pagination: {
@@ -399,7 +439,7 @@ $(document).on('click', '.btn.increase', function(){
     breakpoints: {
       1400: {
         spaceBetween: 20,
-        slidesPerView: 5,
+        slidesPerView: 6,
       },
       1200: {
         spaceBetween: 20,
