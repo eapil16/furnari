@@ -96,7 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
         autoHeight: false,
       },
     }
-  });
+  })
+
+  if (window.screen.width > 1440 &&  document.querySelector('.news-slider__slide span.image')) {
+    const imgBlock = document.querySelectorAll('.news-slider__slide span.image');
+    const size = imgBlock[0].clientWidth;
+    imgBlock.forEach(el => el.style.height = size + 'px');
+  }
 
   document.querySelector('body').addEventListener('click', e => {
     if (e.target.closest('.mobile-menu-button')) {

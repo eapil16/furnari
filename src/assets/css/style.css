@@ -1061,12 +1061,12 @@ a:hover {
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 6px;
+  margin: 0 5px;
 }
 
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #fff;
   opacity: 1;
@@ -1355,7 +1355,7 @@ h2 {
 
 .main-news__caption h2 {
   text-align: left;
-  margin: 0 auto 141px;
+  margin: 0 auto 90px;
   color: #A75248;
   max-width: 200px;
 }
@@ -1391,7 +1391,7 @@ h2 {
 }
 
 .news-slider .swiper-slide {
-  width: 370px;
+  width: 300px;
 }
 
 .news-slider__slide {
@@ -1830,7 +1830,7 @@ h2 {
   float: left;
   padding-right: 3px;
   content: '- ';
-  line-height: 17px;
+  line-height: 19px;
   color: #6A6259;
 }
 
@@ -1840,6 +1840,10 @@ h2 {
 
 .breadcrumb-item:first-child {
   margin: 0 5px 0 9px;
+}
+
+.breadcrumb-item:last-child::before {
+  line-height: 17px;
 }
 
 .radiobox {
@@ -2756,11 +2760,14 @@ input.form-control[type=date] {
 .basket-sidebar__callback ul.social li {
   display: block;
   padding: 0;
-  margin: 0 0 0 8px;
+  margin: 0 0 0 14px;
 }
 
 .basket-sidebar__callback ul.social li img {
-  width: 23px;
+  width: auto;
+  height: auto;
+  max-width: 22.65px;
+  min-width: 22.65px;
 }
 
 .basket-sidebar__info .item {
@@ -3500,10 +3507,10 @@ input.form-control[type=date] {
 
 .accordion-body p {
   color: #000;
-  font-size: 16px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 200;
-  line-height: 20px;
+  line-height: 16px;
   margin: 0;
 }
 
@@ -3623,7 +3630,12 @@ input.form-control[type=date] {
 }
 
 .accordion-body__size_flex ul.social li {
-  margin: 0 -6px 0 10px;
+  margin: 0 -6px 0 16px;
+}
+
+.accordion-body__size_flex ul.social li img {
+  max-width: 22.65px;
+  min-width: 22.65px;
 }
 
 .accordion-header {
@@ -3826,13 +3838,14 @@ input.form-control[type=date] {
 .modal-content__callback ul.social li {
   display: block;
   padding: 0;
-  margin: 0 0 0 10px;
+  margin: 0 0 0 16px;
 }
 
 .modal-content__callback ul.social li img {
   width: auto;
   height: auto;
-  max-width: 27px;
+  max-width: 22.65px;
+  min-width: 22.65px;
 }
 
 .order-block {
@@ -4248,14 +4261,22 @@ input.form-control[type=date] {
   display: none;
 }
 
-.basket-sidebar__basket .basket-small__dropdown {
-  padding: 22px 0;
+.basket-sidebar__basket .basket-small__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin: 0 0 22px 0;
+}
+
+.basket-sidebar__basket .basket-small__item:last-child {
+  margin: 0;
+}
+
+.basket-sidebar__basket .basket-small__dropdown {
+  padding: 22px 0;
   border-bottom: 1px solid #ECECEC;
 }
 
@@ -5079,7 +5100,7 @@ input.form-control[type=date] {
 }
 
 .delivery-page-flex {
-  padding: 0 48px;
+  padding: 0 49px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5605,6 +5626,21 @@ input.form-control[type=date] {
 
 .brand-history__nav {
   margin: 0 114px 0 0;
+}
+
+.brand-history__nav .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 3px;
+}
+
+.brand-history__nav .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+  margin: 0 6px;
+}
+
+.brand-history__nav .swiper-pagination-bullet:after {
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
 }
 
 .brand-history-slider {
@@ -7120,6 +7156,9 @@ input.form-control[type=date] {
 }
 
 @media screen and (max-width: 767px) {
+  .main-news__caption h2 {
+    text-align: center;
+  }
   .contacts {
     margin: 25px 0 0 0;
   }
@@ -8623,12 +8662,12 @@ input.form-control[type=date] {
   }
   .accordion-body__size_flex {
     margin: 43px 12px 15px;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .accordion-body__size_flex ul.social li {
-    margin: 15px -6px -7px 15px;
+    margin: 12px -6px -7px 15px;
   }
   .accordion-button {
     font-size: 16px;
@@ -8699,8 +8738,12 @@ input.form-control[type=date] {
   }
   .product-page .breadcrumb-item + .breadcrumb-item::before {
     position: absolute;
-    top: -1px;
+    top: -2.5px;
     left: -8px;
+  }
+  .product-page .breadcrumb-item + .breadcrumb-item:last-child:before {
+    position: absolute;
+    top: -1px;
   }
   .popular-mobile__slide .image {
     height: 219px;

@@ -874,12 +874,12 @@ a {
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
-  margin: 0 6px;
+  margin: 0 5px;
 }
 
 .swiper-pagination-bullet {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: #fff;
   opacity: 1;
@@ -1094,7 +1094,7 @@ h2 {
     padding: 0 0 0 40px;
     h2 {
       text-align: left;
-      margin: 0 auto 141px;
+      margin: 0 auto 90px;
       color: #A75248;
       max-width: 200px;
     }
@@ -1127,7 +1127,7 @@ h2 {
 
 .news-slider {
   .swiper-slide {
-    width: 370px;
+    width: 300px;
   }
   &__slide {
     position: relative;
@@ -1500,7 +1500,7 @@ h2 {
   float: left;
   padding-right: 3px;
   content: '- ';
-  line-height: 17px;
+  line-height: 19px;
   color: #6A6259;
 }
 .breadcrumb-item:first-child+.breadcrumb-item::before {
@@ -1508,6 +1508,9 @@ h2 {
 }
 .breadcrumb-item:first-child {
   margin: 0 5px 0 9px;
+}
+.breadcrumb-item:last-child::before {
+  line-height: 17px;
 }
 
 .radiobox {
@@ -2263,9 +2266,12 @@ input.form-control[type=date]{
         li {
           display: block;
           padding: 0;
-          margin: 0 0 0 8px;
+          margin: 0 0 0 14px;
           img {
-            width: 23px;
+            width: auto;
+            height: auto;
+            max-width: 22.65px;
+            min-width: 22.65px;
           }
         }
       }
@@ -2868,10 +2874,10 @@ input.form-control[type=date]{
   padding: 0 0 24px 0;
   p {
     color: #000;
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 200;
-    line-height: 20px;
+    line-height: 16px;
     margin:  0;
     a {
       color: #000;
@@ -2958,7 +2964,11 @@ input.form-control[type=date]{
     display: flex;
     align-items: center;
     li {
-      margin: 0 -6px 0 10px;
+      margin: 0 -6px 0 16px;
+      img {
+        max-width: 22.65px;
+        min-width: 22.65px;
+      }
     }
   }
 }
@@ -3121,11 +3131,12 @@ input.form-control[type=date]{
     li {
       display: block;
       padding: 0;
-      margin: 0 0 0 10px;
+      margin: 0 0 0 16px;
       img {
         width: auto;
         height: auto;
-        max-width: 27px;
+        max-width: 22.65px;
+        min-width: 22.65px;
       }
     }
   }
@@ -3454,10 +3465,18 @@ input.form-control[type=date]{
     &_drop {
       display: none;
     }
-    &__dropdown {
-      padding: 22px 0;
+    &__item {
       display: flex;
       align-items: flex-start;
+      margin: 0 0 22px 0;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__dropdown {
+      padding: 22px 0;
+      // display: flex;
+      // align-items: flex-start;
       border-bottom: 1px solid #ECECEC;
       .item-image {
         width: 104px;
@@ -4115,7 +4134,7 @@ input.form-control[type=date]{
     }
   }
   &-flex {
-    padding: 0 48px;
+    padding: 0 49px;
     display: flex;
     align-items: flex-start;
     &__invert {
@@ -4522,6 +4541,18 @@ input.form-control[type=date]{
   }
   &__nav {
     margin: 0 114px 0 0;
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 3px;
+    }
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet-active {
+      margin: 0 6px;
+    }
+    .swiper-pagination-bullet:after {
+      top: -3px;
+      left: -3px;
+      right: -3px;
+      bottom: -3px;
+    }
   }
   &-slider {
     margin: 0 0 100px 0;
@@ -5859,6 +5890,9 @@ input.form-control[type=date]{
 }
 
 @media screen and (max-width: 767px) {
+  .main-news__caption h2 {
+    text-align: center;
+  }
   .contacts {
     margin: 25px 0 0 0;
   }
@@ -7254,10 +7288,10 @@ input.form-control[type=date]{
   }
   .accordion-body__size_flex {
     margin: 43px 12px 15px;
-    align-items: flex-end;
+    align-items: center;
   }
   .accordion-body__size_flex ul.social li {
-    margin: 15px -6px -7px 15px;
+    margin: 12px -6px -7px 15px;
   }
   .accordion-button {
     font-size: 16px;
@@ -7327,8 +7361,12 @@ input.form-control[type=date]{
     }
     .breadcrumb-item + .breadcrumb-item::before {
       position: absolute;
-      top: -1px;
+      top: -2.5px;
       left: -8px;
+    }
+    .breadcrumb-item + .breadcrumb-item:last-child:before {
+      position: absolute;
+      top: -1px;
     }
   }
   
