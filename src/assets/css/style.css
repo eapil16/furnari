@@ -9427,3 +9427,91 @@ input.form-control[type=date] {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+/* 03.05.2024 */
+#wayModal .modal-dialog {
+  max-width: 551px;
+}
+#wayModal .modal-content {
+  padding: 0;
+  border:0;
+}
+#wayModal .btn-close {
+  opacity: 1;
+  filter: invert(1);
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  top: 20px;
+  right: 20px;
+}
+.way-modal__block_image  {
+  height: 188px;
+  width: 100%;
+}
+.way-modal__block_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.way-modal__block_content {
+  padding: 34px 36px 35px;
+}
+.way-modal__block_content p {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 19.96px;
+  text-align: center;
+  color: #000;
+  max-width: 380px;
+  margin: 0 auto 23px;
+}
+.way-modal__block_buttons {
+  margin: 0 -3px;
+}
+.way-modal__block_buttons .button {
+  width: calc(50% - 6px);
+  margin: 0 3px;
+  font-size: 11px;
+  font-weight: 300;
+  line-height: 12.91px;
+  text-align: center;
+  padding: 14px 16px 13px;
+}
+
+@media screen and (max-width: 575px) {
+  #wayModal .modal-dialog {
+    max-width: 341px;
+    margin: 0 auto;
+  }
+  .way-modal__block_image  {
+    height: 143.27px;
+  }
+  .way-modal__block_content {
+    padding: 25px 22px 26px;
+  }
+  .way-modal__block_content p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16.44px;
+    margin: 0 auto 17px;  
+  }
+  .way-modal__block_buttons {
+    margin: 0 -2px;
+  }
+  .way-modal__block_buttons .button {
+    width: calc(50% - 4px);
+    margin: 0 2px;
+    padding: 10px 16px 8px;
+  }
+  #wayModal .btn-close {
+    width: 13px;
+    height: 13px;
+    top: 10px;
+    right: 10px;
+    background-size: cover;
+  }
+}
+
+/* end 03.05.2024 */
